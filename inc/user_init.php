@@ -10,9 +10,9 @@
 		$query = "SELECT firstname, lastname, access_level
 				  FROM users
 				  WHERE id = '".$_SESSION['user_id']."'";
-		$row = array_shift($GLOBALS['db']->get_data($query));
+		$row = $GLOBALS['db']->get_data($query);
 		$current_user->is_logged_in = true;
-		$current_user->set_details($_SESSION['user_id'], $row['firstname'] . " " . $row['lastname'], $row['access_level']);
+		$current_user->set_details($_SESSION['user_id'], $row[0]['firstname'] . " " . $row[0]['lastname'], $row[0]['access_level']);
 	} else {
 		$current_user->is_logged_in = false;
 	}

@@ -18,10 +18,10 @@
 
 
 		// check if user credentials exists
-		if($row = array_shift($GLOBALS['db']->get_data("SELECT id, username, password FROM users WHERE username = '$username'"))) {
-			if(password_verify($password, $row['password'])) {
+		if($row = $GLOBALS['db']->get_data("SELECT id, username, password FROM users WHERE username = '$username'")) {
+			if(password_verify($password, $row[0]['password'])) {
 				$_SESSION['logged_in'] = true;
-				$_SESSION['user_id'] = $row['id'];
+				$_SESSION['user_id'] = $row[0]['id'];
 				echo "success";
 			}
 		}
