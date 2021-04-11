@@ -172,7 +172,7 @@
                 foreach ($portfolio_items as $portfolio) :
                 ?>
                 
-                    <div class="col-md-4 col-sm-6">
+                    <div class="col-md-4 col-sm-6" style="margin-bottom:1.6em">
                         <a href="portfolio-item.html">
                             <div class="image-wrap" style="height: 205px;overflow: hidden;border: 1px solid #f5f5f5;">
                                 <img class="img-responsive img-portfolio img-hover" src="/oop-cms/uploads/<?php echo $portfolio->get_image(); ?>" alt="">

@@ -59,13 +59,13 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Three Column Portfolio
-                    <small>Subheading</small>
+                <h1 class="page-header">Portfolio
+                    
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a>
+                    <li><a href="<?php echo SITE_TITLE; ?>">Home</a>
                     </li>
-                    <li class="active">Three Column Portfolio</li>
+                    <li class="active">Portfolio</li>
                 </ol>
             </div>
         </div>

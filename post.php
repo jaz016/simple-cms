@@ -7,7 +7,8 @@
     include 'inc/user_init.php';
     
 
-
+    $blog_posts = new BlogPost();
+    $blog_post_items = $blog_posts->fetch_all();
     $post = BlogPost::fetch_one($_GET['id']);
     $page_title = $post->get_title();
 
@@ -162,35 +163,31 @@
                 </div>
 
                 <!-- Blog Categories Well -->
-                <!-- <div class="well">
+                <div class="well">
                     <h4>Blog Categories</h4>
                     <div class="row">
                         <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
+                            <?php 
+                            $categories = $blog_posts->fetch_categories();
+                            if(!$categories)
+                                echo "<span>There are no blog categories</span>";
+                            else {
+                                echo "<ul class='list-unstyled'>";
+                                foreach ($categories as $category) :
+                                ?>
+                                
+                                    <li><a href="#"><?php echo $category['category_name']; ?></a></li>
+
+                                <?php
+                                endforeach;
+                                echo "</ul>";
+                            }
+                            ?>
                         </div>
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <!-- /.col-lg-6 -->
                     </div>
-                </div> -->
+                    <!-- /.row -->
+                </div>
 
                 <!-- Side Widget Well -->
                 <div class="well">
