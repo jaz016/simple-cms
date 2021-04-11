@@ -63,7 +63,7 @@
                     
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="<?php echo SITE_TITLE; ?>">Home</a>
+                    <li><a href="<?php echo ROOT_DIR; ?>">Home</a>
                     </li>
                     <li class="active">Portfolio</li>
                 </ol>

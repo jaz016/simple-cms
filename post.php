@@ -65,7 +65,7 @@
                     </small>
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="/">Home</a>
+                    <li><a href="<?php echo ROOT_DIR; ?>">Home</a>
                     </li>
                     <li class="active"><?php echo $post->get_title(); ?></li>
                 </ol>
@@ -154,7 +154,7 @@
                 <div class="well">
                     <h4>Blog Search</h4>
                     <div class="input-group">
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" placeholder="Enter Post Title">
                         <span class="input-group-btn">
                             <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
                         </span>

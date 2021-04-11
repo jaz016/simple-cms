@@ -66,9 +66,9 @@
                     <small>Management</small>
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a>
+                    <li><a href="<?php echo ROOT_DIR; ?>">Home</a>
                     </li>
-                    <li class="active">Sidebar Page</li>
+                    <li class="active">Portfolio Management</li>
                 </ol>
             </div>
         </div>
