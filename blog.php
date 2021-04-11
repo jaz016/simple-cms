@@ -87,14 +87,14 @@
                         
                         
                         <h2>
-                            <a href="#"><?php echo $blog_post->get_title(); ?></a>
+                            <a href="post.php?id=<?php echo $blog_post->get_id(); ?>"><?php echo $blog_post->get_title(); ?></a>
                         </h2>
                         <p class="lead">
-                            by <a href="index.php"><?php echo $blog_post->get_author(); ?></a>
+                            by <strong><?php echo $blog_post->get_author(); ?></strong>
                         </p>
                         <p><i class="fa fa-clock-o"></i> Posted on <?php echo $blog_post->get_date_posted(); ?></p>
                         <hr>
-                        <a href="blog-post.html">
+                        <a href="post.php?id=<?php echo $blog_post->get_id(); ?>">
                             <img class="img-responsive img-hover" src="/oop-cms/uploads/<?php echo $blog_post->get_image(); ?>" alt="">
                         </a>
                         <hr>

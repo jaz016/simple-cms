@@ -60,7 +60,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header"><?php echo $post->get_title(); ?>
-                    <small>by <a href="#"><?php echo $post->get_author(); ?></a>
+                    <small>by <strong><?php echo $post->get_author(); ?></strong>
                     </small>
                 </h1>
                 <ol class="breadcrumb">

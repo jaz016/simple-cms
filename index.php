@@ -166,7 +166,7 @@
             <!-- Portfolio Section -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="page-header">Simple CMS Portfolio</h2>
+                    <h2 class="page-header"><?php echo SITE_TITLE; ?> Portfolio</h2>
                 </div>
                 <?php
                 foreach ($portfolio_items as $portfolio) :
