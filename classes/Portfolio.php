@@ -32,6 +32,33 @@
 		}
 
 
+		public static function fetch_one($id) {
+
+			if($rows = $GLOBALS['db']->get_data("SELECT *
+												 FROM portfolio_items
+												 WHERE id = $id")) {
+				foreach ($rows as $row) {
+
+
+					$this_object     			= new self;
+					$this_object->id 			= $row['id'];
+					$this_object->title 		= $row['name'];
+					$this_object->text 			= $row['description'];
+					$this_object->image 		= $row['portfolio_img'];
+					$this_object->date_posted 	= $row['date_posted'];
+					$result         			= $this_object;
+
+				}
+
+				return $result;
+
+			} else
+				return false;
+
+		}
+
+
+
 		public function get_date_posted() {
 
 			return $this->date_posted;
